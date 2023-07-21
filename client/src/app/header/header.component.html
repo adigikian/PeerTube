@@ -1,11 +1,13 @@
 <my-search-typeahead class="w-100 d-flex justify-content-center"></my-search-typeahead>
 
 <div class="btn-col">
-  <a [routerLink]="'/signup'" class="btn btn-primary">Subscribes</a>
-  <a [routerLink]="'/login'" class="btn btn-outline-primary">
-    <img src="https://colinrivas.show/storage/2021/10/icon-user.svg" alt="">
-    Log In
-  </a>
+  <ng-container *ngIf="!isLoggedIn">
+    <a [routerLink]="'/signup'" class="btn btn-primary">Subscribes</a>
+    <a [routerLink]="'/login'" class="btn btn-outline-primary">
+      <img src="https://colinrivas.show/storage/2021/10/icon-user.svg" alt="">
+      Log In
+    </a>
+  </ng-container>
 </div>
 
 
