@@ -16,7 +16,7 @@
 }
 
 .root-header {
-  height: $header-height;
+  height:$header-height;
   position: fixed;
   top: 0;
   width: 100%;
@@ -46,6 +46,9 @@
     @media screen and (max-width: $mobile-view) {
       margin: 0 10px;
     }
+  }
+  .peertube-title{ max-width:164px;
+    img{ max-width:100%;}
   }
 }
 

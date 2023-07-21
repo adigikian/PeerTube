@@ -12,16 +12,17 @@
   }
 }
 
-.icon-search {
-  @include icon(25px);
-  @include margin-left(-35px);
-
-  height: 18px;
-
-  // yolo
+.search-icon-bg{
   position: absolute;
-  margin-top: 3.5px;
-  right: 10px;
+  right:1px;
+  top:1px; bottom:1px;
+  background-color:#f8f8f8;
+  border-radius: 50px;
+  width:62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .icon-search{ height:20px;}
 }
 
 .jump-to-suggestions {
@@ -72,14 +73,14 @@ li.suggestion {
 }
 
 #typeahead-container {
+  display:flex;
+  flex:1;
   font-size: 14px;
   margin: 0 10px;
+  max-width:740px;
 
-  input {
-    border: 1px solid pvar(--mainBackgroundColor) !important;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 20px 0;
-    flex-grow: 1;
-    transition: box-shadow .3s ease, width .2s ease;
+  input { flex:1; border: 1px solid #ccc; height: 44px; box-shadow: inset 0 1px 2px #eee; border-radius:50px;
+    width: auto; max-width: 100%;
   }
 
   @media screen and (max-width: $small-view) {

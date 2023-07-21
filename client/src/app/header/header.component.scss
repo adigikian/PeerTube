@@ -20,3 +20,14 @@
     }
   }
 }
+
+.btn-col{ display:flex;
+  .btn{ 
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px 0 0;
+    img{ max-width: 28px; margin:0 10px 0 0;}
+  }
+}
