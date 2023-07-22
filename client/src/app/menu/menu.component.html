@@ -99,7 +99,7 @@
         </div>
       </div>
 
-      <div *ngIf="!isLoggedIn" class="login-buttons-block">
+      <div *ngIf="!isLoggedIn" class="login-buttons-block d-none">
         <my-login-link className="peertube-button-link orange-button w-100 text-truncate"></my-login-link>
 
         <a *ngIf="isRegistrationAllowed()" routerLink="/signup" class="peertube-button-link create-account-button text-truncate">
@@ -109,34 +109,69 @@
 
       <ng-container *ngFor="let menuSection of menuSections" >
         <div [ngClass]="[ menuSection.key, 'menu-block' ]">
-          <div i18n class="block-title">{{ menuSection.title }}</div>
-
-          <a class="menu-link" *ngFor="let link of menuSection.links" [routerLink]="link.path" routerLinkActive="active">
+          <!-- <div i18n class="block-title">{{ menuSection.title }}</div> -->
+          <!-- <a class="menu-link" *ngFor="let link of menuSection.links" [routerLink]="link.path" routerLinkActive="active">
             <my-global-icon *ngIf="link.icon" [iconName]="link.icon" [ngClass]="link.iconClass" aria-hidden="true"></my-global-icon>
             <ng-container>{{ link.shortLabel }}</ng-container>
+          </a> -->
+          <a href="#" class="menu-link active">
+            <img class="fas start-icon" src="https://colinrivas.show/storage/2021/10/home-cropped.svg">
+            Start
+          </a>
+          <a href="#" class="menu-link">
+            <i class="fas fa-user"></i>
+            Interviews
+          </a>
+          <a href="#" class="menu-link">
+            <img class="fas" src="https://colinrivas.show/storage/2021/10/icon-fire.svg">
+            Most Viewed
+          </a>
+          <a href="#" class="menu-link">
+            <i class="fas fa-book"></i>
+            Books
+          </a>
+          <a href="#" class="menu-link">
+            <i class="fas fa-list"></i>
+            Playlists
           </a>
         </div>
+        
       </ng-container>
     </div>
 
     <div class="footer">
-      <div class="footer-block">
+      <ul class="other-links">
+        <li>
+          <a href="https://t.me/colinrivas" target="_blank">Telegram Channel</a>
+        </li>
+        <li>
+          <a href="#">Terms and Conditions and Legal Notice</a>
+          <a href="#">Notice</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies Policy</a>
+          <a href="#">Conditions of sale</a>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <span>
+            © 2022-2023 <a href="https://colinrivas.show/">colinrivas.show</a>
+          </span>
+        </li>
+      </ul>
+
+      <!-- <div class="footer-block">
         <button *ngIf="!isLoggedIn" class="menu-link button-unstyle" (click)="openQuickSettings()">
           <my-global-icon iconName="cog" aria-hidden="true"></my-global-icon>
           <ng-container i18n>My settings</ng-container>
         </button>
-
         <a class="menu-link" routerLink="/about" routerLinkActive="active">
           <my-global-icon iconName="help" aria-hidden="true"></my-global-icon>
           <ng-container i18n>About</ng-container>
         </a>
       </div>
-
       <div class="footer-bottom">
-
         <div class="footer-links">
           <button *ngIf="isLoggedIn === false" (click)="openLanguageChooser()" class="button-unstyle" i18n>Interface: {{ currentInterfaceLanguage }}</button>
-
           <div>
             <a i18n routerLink="/about/instance">Contact</a>
             <a i18n href="https://joinpeertube.org/help" i18n-title title="Get help using PeerTube" target="_blank" rel="noopener noreferrer">Help</a>
@@ -146,15 +181,13 @@
             <button (click)="openHotkeysCheatSheet()" class="button-unstyle" i18n>Keyboard shortcuts</button>
           </div>
         </div>
-
         <div class="footer-copyleft" i18n-title title="powered by PeerTube - CopyLeft 2015-2023">
           <a href="https://joinpeertube.org" class="me-1" target="_blank" rel="noopener noreferrer" i18n>powered by PeerTube</a>
-
           <a href="https://github.com/Chocobozzz/PeerTube/blob/develop/LICENSE" target="_blank" rel="noopener noreferrer">
             <span aria-label="copyleft" class="d-inline-block" style="transform: rotateY(180deg)">&copy;</span> 2015-2023
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </menu>
 </div>

@@ -292,5 +292,7 @@ my-global-icon[iconName=external-link] {
 
 
 .btn{ border-radius:30px;
-  &.btn-primary-outline{ background-color:#FFF; border-color:$primary;}
+  &.btn-outline-primary{ background-color:#FFF; border-color:$primary; color:$primary;
+    &:hover{ background-color:#FFF;}
+  }
 }
